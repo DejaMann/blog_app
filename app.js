@@ -1,17 +1,18 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const morgan = require('morgan')
-const { options } = require('./controllers/BlogRouter')
+// const { options } = require('./controllers/BlogRouter')
+const methodOverride = require('method-override')
 require('dotenv').config()
-const path = require('path')
 
 const app = express()
 const PORT = 3000
 
 app.use(express.static('public'))
-app.use(express.static(path.join(__dirname, 'public')))
 app.use(morgan('dev'))
 app.use(express.json());
+app.use(express.urlencoded({extended: false}));
+app.use(methodOverride('_method'))
 
 app.set("view engine", "jsx")
 app.engine("jsx", require("express-react-views").createEngine());
@@ -27,15 +28,16 @@ app.get('/', (req, res) =>{
 
 
 app.listen(PORT, () => {
-    console.log(`nosy on port ${PORT}`)
+    console.log(`nosy on port ${PORT}`);
+    
+    // connect to MongoDB
+    mongoose.connect(process.env.MONGO_URI, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true
+    });
+    
+    mongoose.connection.once('open', () => {
+        console.log('connected to mongo');
+    });
     
 })
-// connect to MongoDB
-mongoose.connect(process.env.MONGO_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-});
-
-mongoose.connection.once('open', () => {
-    console.log('connected to mongo');
-    });
