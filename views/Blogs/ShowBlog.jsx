@@ -1,5 +1,5 @@
 const React = require('react')
-
+// show blog
 class Blogs extends React.Component {
     render(){
         const {blog} = this.props

@@ -1,7 +1,6 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const morgan = require('morgan')
-// const { options } = require('./controllers/BlogRouter')
 const methodOverride = require('method-override')
 require('dotenv').config()
 

@@ -1,5 +1,5 @@
 const React = require('react')
-
+// navigation on homepage
 class Navbar extends React.Component {
     render(){
         return (

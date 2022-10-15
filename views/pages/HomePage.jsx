@@ -1,6 +1,6 @@
 const React = require('react')
 const Navbar = require('../ReusableReactComponents/Navbar')
-
+// home
 
 class HomePage extends React.Component {
     render(){

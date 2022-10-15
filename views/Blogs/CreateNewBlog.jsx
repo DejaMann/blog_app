@@ -1,5 +1,5 @@
 const React = require('react')
-
+// new blog
 class New extends React.Component {
     render(){
         return(

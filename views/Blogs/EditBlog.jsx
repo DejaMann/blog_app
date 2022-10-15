@@ -1,5 +1,5 @@
 const React = require('react')
-
+// edit blog
 class Edit extends React.Component {
     render(){
         const {fruit} = this.props
