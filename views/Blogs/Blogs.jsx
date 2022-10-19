@@ -12,6 +12,7 @@ class Blogs extends React.Component {
                     <link rel="stylesheet" href="/CSS/app.css" />
                 </head>
 
+                <h2>Hello, {loggedInUser}</h2>
                 <Navbar loggedInUser={loggedInUser} />
 
                 <h1>Blogs</h1>
@@ -20,7 +21,7 @@ class Blogs extends React.Component {
                     <div style = {styles.wrapper} className='card'> 
                         <a href={`/blog/${blog._id}`}> 
                         {'  '}
-                     <h2>{blog.title}</h2>
+                     <h3>{blog.title}</h2>
                        </a>  
                        <div>
                         <p>{blog.body}</p>
