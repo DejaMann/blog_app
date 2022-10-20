@@ -61,7 +61,7 @@ router.post('/signin', async (req, res) => {
         req.session.username = user.username
         req.session.loggedIn = true
         // redirect to /blogs
-        res.redirect('/blog')
+        res.redirect('/signin')
     } catch (error){
 
     }
