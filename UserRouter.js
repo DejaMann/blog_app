@@ -34,7 +34,7 @@ router.post('/signup', async (req, res) => {
     const SALT = await bcrypt.genSalt(10) // mixes with password to make a hash that prevents predictability
     req.body.password = await bcrypt.hash (req.body.password, SALT)
     const user = await UserModel.create(req.body)
-        res.redirect('/user/signin')
+        res.redirect('/signin')
     } catch(error) {
         console.log(error);
         res.status(403).send('Cannot POST')
