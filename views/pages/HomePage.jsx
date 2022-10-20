@@ -13,7 +13,7 @@ class HomePage extends React.Component {
                 <section>
                     <h1>Welcome to My Blog App!</h1>
 
-                    <img src='' />
+                    {/* <img src='' /> */}
 
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe vero porro laboriosam laborum quis modi odio dolore tempora neque officiis molestiae, odit, amet esse architecto ut debitis quae unde. Eos.</p>
                 </section>
@@ -21,7 +21,7 @@ class HomePage extends React.Component {
                 <section className = 'margin-section'>
                     <h1>Bio</h1>
                     <div style = {styles.intro}>
-                        <img src = '' style = {styles.me} />
+                        {/* <img src = '' style = {styles.me} /> */}
                         <div>
                             <h2>Developer</h2>
                               <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium illum nesciunt nemo sunt odit         temporibus esse, soluta aperiam cupiditate sapiente in voluptatum a necessitatibus quo sit beatae labore corrupti perspiciatis.   
