@@ -37,7 +37,7 @@ router.get('/new', (req, res) => {
 
 
 // === POST: CREATE a new blog
-router.post('/blog/new', async (req, res) => {
+router.post('/new', async (req, res) => {
     try {
         // set author to loggedIn user
         req.body.author = req.session.username
